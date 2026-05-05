@@ -32,4 +32,18 @@ Dentro da pasta do projeto, execute o comando abaixo para compilar o arquivo .pr
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. sentiment.proto
 ```
 
-3. Iniciar o Servidor (Máquina A)
+### 3. Iniciar o Servidor (Máquina A)
+Execute o comando para ligar o servidor:
+
+```bash
+python server.py
+```
+
+### 4. Iniciar o Cliente (Máquina B)
+Certifique-se de que o IP no arquivo client.py aponta para o endereço do servidor e execute:
+
+```bash
+python client.py
+```
+
+---
