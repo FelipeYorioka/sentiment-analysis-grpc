@@ -23,3 +23,13 @@ Para rodar o projeto, é necessário instalar as bibliotecas do gRPC:
 
 ```bash
 pip install grpcio grpcio-tools
+```
+
+### 2. Gerar arquivos de comunicação (Stubs)
+Dentro da pasta do projeto, execute o comando abaixo para compilar o arquivo .proto e gerar os arquivos auxiliares de comunicação:
+
+```bash
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. sentiment.proto
+```
+
+3. Iniciar o Servidor (Máquina A)
