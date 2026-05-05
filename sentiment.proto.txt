@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service SentimentClassifier {
+  rpc ClassifyText (TextRequest) returns (TextResponse);
+}
+
+message TextRequest {
+  string text = 1;
+}
+
+message TextResponse {
+  string sentiment = 1;
+}
